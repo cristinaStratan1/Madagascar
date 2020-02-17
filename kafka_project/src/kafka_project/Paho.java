@@ -64,7 +64,7 @@ public class Paho {
 				MqttMessage message = new MqttMessage();
 				message.setPayload(data.toString().getBytes());
 
-				message.setRetained(true); // try with true
+				message.setRetained(true);
 				message.setQos(1);
 
 				client.publish("hello-mqtt", message);
